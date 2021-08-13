@@ -1,0 +1,505 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Advantech Embedded Appliaction Programming Interface (EAPI) Release Notes</title>
+<style type="text/css">
+<!--
+/* --------------------------------------------------
+                  MAIN TOPIC STYLES
+-------------------------------------------------- */
+A:link
+{
+      COLOR: #0000FF;
+      TEXT-DECORATION: underline
+}
+A:active
+{
+ 
+    COLOR: green;
+   
+    TEXT-DECORATION: underline
+}
+A:visited
+{
+   
+    COLOR: purple;
+   
+    TEXT-DECORATION: underline
+}
+A:hover
+{
+    
+    COLOR: red;   
+    TEXT-DECORATION: underline
+}
+BODY
+{
+    BACKGROUND: white;
+    font-family: Verdana;font-size:9pt
+
+}
+
+img
+{
+	font-family: Verdana;
+	font-size:10pt; 
+	margin-top:0.5em;
+	 margin-bottom:1.5em; margin-left:2em 
+
+}
+
+img.folder
+{
+	font-family: Verdana;
+	font-size:10pt; 
+	margin-top:0em;
+	 margin-bottom:0em; margin-left:0em 
+ 
+
+}
+
+
+/* --------------------------------------------------
+                    HEADING STYLES
+-------------------------------------------------- */
+
+h1
+{
+	font-family: Verdana;
+	font-size:12pt; font-weight:bold; margin-top:0; margin-bottom:1em
+}
+h2
+{
+	font-family: Verdana;
+	font-size:10pt; font-weight:bold; margin-top:1.5em; margin-bottom:0 
+}
+h3
+{
+	font-family: Verdana;
+	font-size:9pt; font-weight:bold; margin-top:1em; margin-bottom:0;margin-left:1em
+}
+h4
+{
+	font-family: Times New Roman, Times;
+	
+}
+
+h1.BlueHead
+{
+	font-family: Verdana;
+	font-size:12pt; font-weight:bold; margin-top:0; margin-bottom:1em; color:#000080
+
+}
+hr
+{
+margin-top: 2em
+}
+
+
+/* --------------------------------------------------
+                     TEXT STYLES
+-------------------------------------------------- */
+P
+{
+    MARGIN-TOP: 4pt;
+    FONT-SIZE: 9pt;
+    MARGIN-BOTTOM: 4pt;
+    FONT-FAMILY: Verdana; margin-left:16pt
+}
+
+P.P1
+{
+    MARGIN-TOP: 3pt;
+    FONT-SIZE: 9pt;
+    MARGIN-BOTTOM: 3pt;
+    FONT-FAMILY: Verdana; list-style-type:disc
+}
+
+div.tablediv
+	{
+	width: 100%; /* Forces tables to have correct right margins and top spacing */
+	word-spacing:0; text-indent:0; margin-left:2em; margin-right:0
+	}
+div.head
+	{
+	width: 100%; /* Forces tables to have correct right margins and top spacing */
+	word-spacing:0; text-indent:0; margin-left:0; margin-right:0; background-color:#9CCFFF
+	}
+
+/* --------------------------------------------------
+                    TABLE STYLES
+-------------------------------------------------- */
+Table.Bordered
+{
+	width: 100%; /* Forces tables to have correct right margin */
+	margin-top: .6em;
+	margin-bottom: .3em;
+	border-width: 1px 1px 0px 0px;
+	border-style: solid;
+	border-color: #999999;
+	background-color: #999999; 
+	font-size: 100%; /* Text in Table is same size as text outside table */
+}
+table.Bordered tr, table.Bordered td
+	{ 
+	border-style: solid; /* Creates the cell border and color */
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding: 4px 6px;
+	text-align: left;
+	}
+table.Bordered th
+{
+	border-style: solid; /* Creates the cell border and color */
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding: 4px 6px;
+	text-align: left;
+	background: #cccccc; /* Creates the shaded table header row */
+	vertical-align: bottom;
+
+
+}
+
+table.Bordered tr	
+	{ 
+	background: #cccccc; /* Creates the shaded table header row */
+	vertical-align: bottom;
+	}
+table.Bordered td	
+	{
+	background: #ffffff;
+	vertical-align: top;
+	}
+
+/* --------------------------------------------------
+                     LIST STYLES
+-------------------------------------------------- */
+
+ol, ul
+	{
+	margin-top: 0.5em; 
+	padding-left: 1px; 
+	margin-left:20pt
+	}
+li
+	{
+	margin-bottom: 0.5em;  
+	margin-left:20pt;; 
+	margin-top:0 
+	}
+ul p, ol p, dl p
+	{
+	margin-left: 0em;
+	}
+ul p.label, ol p.label
+	{
+	margin-top: 0.5em;
+	}
+
+/* --------------------------------------------------
+               DEFINITION LIST STYLES
+-------------------------------------------------- */
+
+dl
+	{
+	margin-top: 0em; 
+	padding-left: 1px; margin-left:16pt
+	}
+dd
+	{
+	margin-bottom: 0em;  
+	margin-left: 1.5em; 
+	}
+dt
+	{
+	margin-top: .5em; 
+	}
+
+/* --------------------------------------------------
+           CODE, SYNTAX, and REFTIP STYLES
+-------------------------------------------------- */
+pre
+	{
+	margin-top: 2;
+	margin-bottom: 2; 
+	}
+pre.code
+	{
+	/* This is 100% of 70% */
+	background:#F0F0F0; cursor: text;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	color: #000066;
+	font-style:normal; font-variant:normal; font-weight:normal; font-size:100%; font-family:Courier New, Monospace, Courier; margin-left:16pt; padding-left:8px; padding-right:8px; padding-top:4px; padding-bottom:4px
+	}
+pre b, code b
+	{
+	letter-spacing: .1em; /* opens kerning on bold in Syntax/Code */
+	}
+pre.syntax
+	{
+	/* This is 100% of 70% */
+	border:1px solid #999999; background:#CCCCCC; cursor: text;
+	margin-top: 1em;
+	margin-bottom: 1em; 
+	color: #000000;
+	font-style:normal; font-variant:normal; font-weight:normal; font-size:100%; font-family:Courier New, Monospace, Courier; margin-left:16pt; padding-left:8px; padding-right:8px; padding-top:4px; padding-bottom:4px
+	}-->
+</style>
+</head>
+<body>
+<h1>Advantech Embedded Application Programming Interface (EAPI) Release Notes</h1>
+<P>January 28, 2021</P>
+
+<P>Please read this documentation carefully. It includes late-breaking information about PlatFormSDK Configuration tool. </P>
+<h2>Contents</h2>
+<p><a href="#Version_Information">Version Information</a></p>
+<p><a href="#OS_support_list">OS support list</a></p>
+<p><a href="#System_Requirement">System Requirement</a></p>
+<P><A href="#Important_Features">Important Features</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#Brightness">Brightness</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#ETP">ETP</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#GPIO">GPIO</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#HWMonitor">HWMonitor</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#LED">LED</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#RedundantPowerStatus">RedundantPowerStatus</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#AuxIO">AuxIO</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#IPS-AE">IPS-AE</A></P>
+<p><a href="#Advantech_Utility">Advantech Utility</a></p>
+<P>&nbsp;&nbsp;&nbsp; <A href="#Brightness_Sample">Brightness Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#ETP_Sample">ETP Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#GetCap_Sample">GetCap Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#GPIO_Sample">GPIO Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#GPIO_Utility">GPIO Utility</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#GPIO_TestTool">GPIO Test Tool</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#HWMonitor_Sample">HWMonitor Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#LED_Sample">LED Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#RedundantPowerStatus_Sample">RedundantPowerStatus Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#IPS-AE_Sample">IPS-AE_Sample</A></P>
+<P>&nbsp;&nbsp;&nbsp; <A href="#Develpoer">Developer Guide</A></P>
+<p><a href="#Known_Issue">Known Issue</a></p>
+<P>&nbsp;&nbsp;&nbsp; <A href="#ETP_Function">ETP Function</A></P>
+
+
+<h2><a name="Version_Information">Version Information</a></h2>
+
+<h3>[V1.00.004 32/64 bit]: 2021/01/28</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Upgrade EAPI.dll version to 0.9.5 for adding WMI support for brightness APIs with PPC devices and modifying GetCap() API.</li>
+        <li>Upgrade SUSI converter version to 4.6.6.0 for modifying brightness function.</li>
+		<li>Upgrade EAPI Developer Guide to 1.12.</li>
+		<li>Update GPIOWinrt.dll for initialization exception problem.</li>
+		<li>Add PPC Brightness Registry Profile batch script to identify PPC devices with support WMI brightness function.</li>
+		<li>Add Capability function and GetCapability sample code.</li>
+</ul>
+
+<h3>[V1.00.002 32/64 bit]: 2020/10/30</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Upgrade EAPI.dll version from 0.8.3 to 0.9.2 for adding LED support for APAX-5580, GetCap() API and bug fixed to support WIN7 OS.</li>
+        <li>Upgrade SUSI converter version from 4.6.3.0 to 4.6.5.0.</li>
+		<li>Modify GPIO function by adding GpioTestTool sample code and GpioTestUI utility.</li>
+		<li>Adjust the shortcuts of the startup menu: EAPI Developer Guide, EAPI Sample Code folder, EAPI Sample Utility, and GPIO Utility.</li>
+		<li>Upgrade EAPI Developer Guide from 1.10 to 1.11.</li>
+</ul>
+
+<h3>[V0.03.023 32/64 bit]: 2020/06/01</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Correct WDT_GetWDTConfig return code. (Corresponding to AdvWatchdog.dll v2.3.3.0).</li>
+</ul>
+
+
+<h3>[V0.03.022 32/64 bit]: 2020/05/15</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Update EAPI.dll ver. to 0.8.2 for supporting UPS callback "Unknow Emerency Code" and Watchdog functions, single level mode only.</li>
+		<li>SUSI converter upgrade to 4.6.2.0 for DeviceOn Watchdog function, single level mode only.</li>
+</ul>
+
+<h3>[V0.03.021 32/64 bit]: 2020/02/15</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Update EAPI.dll ver. to 0.8.1.</li>
+		<li>SUSI converter upgrade to 4.6.1.0 for support PPC-31x0-8211 hardware monitor function.</li>
+</ul>
+
+<h3>[V0.03.020 32/64 bit]: 2019/12/18</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Update EAPI Sample Utility to ver. 1.0.8.0 for add AuxIO function tab.</li>
+		<li>Add EAPI Sample Utility User Manual.pdf to installation package.</li>
+		<li>Fix EAPI encryption issue by change CharSet setting from Unicode to ANSI.</li>
+		<li>SUSI converter upgrade to v4.5.8.0 and resolve DeviceON program crashed.</li>
+</ul>
+<h3>[V0.03.018 32/64 bit]: 2019/10/17</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Fix mbn memory leak issue.</li>
+		<li>Update EAPI.dll ver. to 0.7.9.</li>
+</ul>
+<h3>[V0.03.017 32/64 bit]: 2019/08/21</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Support IPS utility set max DC cut-off delay time(0xfff/0xffff).</li>
+		<li>Update EAPI.dll ver. to 0.7.8.</li>
+</ul>
+<h3>[V0.03.016 32/64 bit]: 2019/08/13</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+        <li>Modify example of Network and Mobile Broadband.</li>
+		<li>Update EAPI.dll ver. to 0.7.7.</li>
+</ul>
+
+<h3>[V0.03.015 32/64 bit]: 2019/06/27</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>Fix Auto Brightness function issue.</li>
+		<li>Fix GPIO Direction and Level setting issue.</li>
+		<li>Update Utility example (EAPI_Sample.exe).</li>
+		<li>Update user manual.</li>
+</ul>
+
+<h3>[V0.03.013 32/64 bit]: 2018/12/06</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>Add Name and Version to registry table.</li>
+		<li>Add IO control code and update EAPI.dll to v0.7.5.</li>
+		<li>Update susi library to v4.5.7.</li>
+		<li>Update example utility (EAPI_Sample.exe).</li>
+		<li>Update EAPI-Developer Guide to v1.8.</li>
+</ul>
+
+<h3>[V0.03.005 32/64 bit]: 2018/06/13</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>Modify Manufacturer to Advantech.</li>
+		<li>Add year 2018 to the Copyright information of installer.</li>
+</ul>
+
+<h3>[V0.03.004 32/64 bit]: 2018/04/26</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>Modify ETP structure in atETPAPI.h.</li>
+		<li>Update EAPI.dll ver. to 0.5.3.</li>
+</ul>
+
+<h3>[V0.03.003 32/64 bit]: 2018/02/08</h3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>First release for PlatFormSDK.</li>
+</ul>
+
+<h2><a name="OS_support_list">OS support list</a></h2>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>Windows 10 Enterprise LTSC</li>
+		<li>Windows Embedded Standard 7</li>
+</ul>
+
+<h2><a name="System_Requirement">System Requirement</a></h2>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>PlatFormSDK package installed.</li>
+</ul>
+
+<h2><a name="Important_Features">Important Features</a></h2>
+<H3><A name="Brightness">Brightness</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>This tool is used to adjust the brightness of screen.</li>
+</ul>
+<H3><A name="ETP">ETP</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>The tool is used to control the ETP data status.</li>
+</ul>
+<H3><A name="GPIO">GPIO</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>The tool is used to set four digital inputs and four digital outputs from GPIO pins for most of on/off trigger and status reading.</li>
+</ul>
+<H3><A name="HWMonitor">HWMonitor</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>This tool is used to get information of temperature and voltage.</li>
+</ul>
+<H3><A name="LED">LED</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>This tool is used to get all Available LED Status and set LED status.</li>
+</ul>
+<H3><A name="RedundantPowerStatus">RedundantPowerStatus</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>This tool is used to get Redundant Power status.</li>
+</ul>
+<H3><A name="AuxIO">AuxIO</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>This tool is used to get Auxiliary IO status.</li>
+</ul>
+<H3><A name="IPS-AE">IPS-AE</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+		<li>This tool is used to get UPS callback status.</li>
+</ul>
+
+
+
+<h2><a name="Advantech_Utility">Advantech Utility</a></h2>
+<H3><A name="Brightness_Sample">Brightness Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\Brightness_Sample\Release\Win32\Brightness_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\Brightness_Sample\Release\x64\Brightness_Sample.exe</FONT></li>
+</ul>
+<H3><A name="ETP_Sample">ETP Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\ETP_Sample\Release\ETP_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\ETP_Sample\Release\ETP_Sample.exe</FONT></li>
+</ul>
+<H3><A name="GetCap_Sample">GetCap Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\GetCap_Sample\Release\Win32\GetCap_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\GetCap_Sample\Release\x64\GetCap_Sample.exe</FONT></li>
+</ul>
+<H3><A name="GPIO_Sample">GPIO Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\GPIO_Sample\Release\Win32\GPIO_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\GPIO_Sample\Release\x64\GPIO_Sample.exe</FONT></li>
+</ul>
+
+<H3><A name="GPIO_Utility">GPIO Utility</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\GPIO Utility\x86\GpioTestUI.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\GPIO Utility\x64\GpioTestUI.exe</FONT></li>
+</ul>
+
+<H3><A name="GPIO_TestTool">GPIO Test Tool</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\GPIO_TestTool\Release\Win32\GpioTestTool.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\GPIO_TestTool\Release\x64\GpioTestTool.exe</FONT></li>
+</ul>
+
+
+<H3><A name="HWMonitor_Sample">HWMonitor Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\HWMonitor_Sample\Release\Win32\HWMonitor_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\HWMonitor_Sample\Release\x64\HWMonitor_Sample.exe</FONT></li>
+</ul>
+<H3><A name="LED_Sample">LED Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\LED_Sample\Release\Win32\LED_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\LED_Sample\Release\x64\LED_Sample.exe</FONT></li>
+</ul>
+<H3><A name="RedundantPowerStatus_Sample">RedundantPowerStatus Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\IPS-AE_Sample\Release\x86\IPS-AE_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\IPS-AE_Sample\Release\x64\IPS-AE_Sample.exe</FONT></li>
+</ul>
+<H3><A name="IPS-AE_Sample">IPS-AE_Sample</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\RedundantPowerStatus_Sample\Release\Win32\RedundantPowerStatus_Sample.exe</FONT></li>
+	<li> For x64 platform, you can run it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\Sample\RedundantPowerStatus_Sample\Release\x64\RedundantPowerStatus_Sample.exe</FONT></li>
+</ul>
+<H3><A name="Develpoer">Developer Guide</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li> For x86 platform, you can open it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\document\EAPI - Developer Guide.pdf</FONT></li>
+	<li> For x64 platform, you can open it at : <FONT color="#000080">C:\Program Files\Advantech\PlatFormSDK\document\EAPI - Developer Guide.pdf</FONT></li>
+</ul>
+
+
+<h2><a name="Known_Issue">Known Issue</a></h2>
+<H3><A name="ETP_Function">ETP Function</A></H3>
+<ul style="margin-left: 20pt; margin-top: 0.5em; padding-left: 1px">
+	<li>ETP function not supported on EC firmware v0.5 of device UNO-137-E1.</li>
+</ul>
+
+
+<p>&nbsp;</p>
+<p align=center>Copyright (C) 2021 Advantech Co., Ltd. All Rights Reserved</p>
+</body>
+
+</html>
